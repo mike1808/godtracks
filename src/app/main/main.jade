@@ -1,0 +1,8 @@
+div(flex, layout='column')
+  gt-navbar
+  md-content#content(flex, ui-view='content')
+
+  nav.gt-floating-button
+    md-button.md-fab.md-primary(ng-click='main.addTrack($event)', aria-label='Add new tracking', active-icon='close', resting-icon='menu')
+      md-icon add
+

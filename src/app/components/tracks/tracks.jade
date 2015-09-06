@@ -1,0 +1,7 @@
+md-list(layout='column')
+  md-list-item.md-3-line(ng-repeat='track in main.tracks', ng-click='main.showDetails($event, track)', aria-label='Show Tracking Number Details')
+    .md-list-item-text
+      h3(ng-bind='track.name')
+      p(ng-bind='track.number')
+
+    md-divider
