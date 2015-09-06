@@ -12,7 +12,7 @@ import Tracks from '../app/components/tracks/tracks.module.js'
 angular
   .module('godtracks', [
     'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngAria', 'restangular', 'ui.router',
-    'ngMaterial',
+    'ngMaterial', 'ngStorage',
     Tracks
   ])
   .constant('toastr', toastr)

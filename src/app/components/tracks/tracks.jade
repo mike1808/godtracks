@@ -1,7 +1,19 @@
-md-list(layout='column')
-  md-list-item.md-3-line(ng-repeat='track in main.tracks', ng-click='main.showDetails($event, track)', aria-label='Show Tracking Number Details')
-    .md-list-item-text
-      h3(ng-bind='track.name')
-      p(ng-bind='track.number')
+div.gt-floating-button-container(layout='column', layout-fill='')
+  div(ui-view='')
 
-    md-divider
+  md-progress-circular.gt-progress-center(md-mode='indeterminate', ng-hide='tracks.tracks')
+
+  md-card.md-whiteframe-z2(ng-repeat='track in tracks.tracks')
+    md-card-content
+      h2(ng-bind='track.name')
+      div(layout='row', layout-fill='', layout-align='space-between center')
+        p(ng-bind='track.number')
+        p(ng-bind='track.status')
+
+    .md-actions(layout='row', layout-align='end center')
+      md-button.md-warn(ng-click='tracks.remove(track)', aria-label='Remove tracking number') Remove
+      md-button.md-primary(ng-click='tracks.showDetails($event, track)', aria-label='Tracking number details') Details
+
+nav.gt-floating-button
+  md-button.md-fab.md-primary(ui-sref='tracks.add', aria-label='Add new tracking', active-icon='close', resting-icon='menu')
+    md-icon add

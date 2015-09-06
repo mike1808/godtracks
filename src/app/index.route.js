@@ -1,4 +1,4 @@
-function routerConfig ($stateProvider, $urlRouterProvider) {
+function routerConfig($stateProvider, $urlRouterProvider) {
   'ngInject';
   $stateProvider
     .state('index', {
@@ -10,9 +10,17 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
     })
     .state('tracks', {
       url: '/',
-      templateUrl: 'app/components/tracks/tracks.html',
-      controller: 'TracksController',
-      controllerAs: 'tracks'
+      parent: 'index',
+      views: {
+        content: {
+          templateUrl: 'app/components/tracks/tracks.html',
+          controller: 'TracksController',
+          controllerAs: 'tracks'
+        }
+      }
+    })
+    .state('tracks.add', {
+      templateUrl: 'app/components/tracks/add.html'
     });
 
   $urlRouterProvider.otherwise('/');

@@ -1,0 +1,11 @@
+form(name='trackForm', novalidate='', ng-submit='trackForm.$valid && tracks.add()')
+  md-content(layout-padding='', layout='row', layout-sm='column')
+    md-input-container
+      label Name
+      input(name='name', ng-model='tracks.track.name', required='')
+    md-input-container
+      label Number
+      input(name='number', ng-model='tracks.track.number', required='')
+
+    md-button.md-primary(type='submit')
+      | Done
