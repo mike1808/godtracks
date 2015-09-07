@@ -10,9 +10,9 @@ Quick Links:
 
 ## <a name="building"></a> Building
 
-Developers can easily build GodTracks using NPM and gulp.
+Developers can easily build GodTracks using NPM, Bower and gulp.
 
-First install or update your local project's **npm** tools:
+First install or update your local project's **npm** and **bower** tools:
 
 ```bash
 # First install all the NPM tools:
@@ -20,6 +20,9 @@ npm install
 
 # Or update
 npm update
+
+# Then bower
+bower install
 ```
 
 Then run the **gulp** task:
@@ -31,7 +34,7 @@ gulp
 
 ## <a name="developing"></a> Developing
 
-In order to run a development version you need NPM and gulp.
+In order to run a development version you need NPM, Bower and gulp.
 
 First install or update your local project's **npm** tools:
 
@@ -41,6 +44,9 @@ npm install
 
 # Or update
 npm update
+
+# Then bower
+bower install
 ```
 
 Then run the **gulp** task:
